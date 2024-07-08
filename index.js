@@ -23,6 +23,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 // const apiKey = process.env.STEAM_API_KEY;
 // console.log(apiKey);
+app.use(cors());
 const steam = new SteamAuth({
   realm: "http://localhost:5000", // Replace with your actual frontend URL
   returnUrl: "http://localhost:5000/auth/steam/authenticate", // Your return route
